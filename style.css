@@ -1,0 +1,30 @@
+body{
+    background: #64b0ff url('./background_duckhunt.png') repeat-x fixed bottom;
+
+    height: 100vh;
+    width:100vw;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
+}
+
+.winning{
+    color:#FFF;
+    font-size: 6em;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.duck{
+    background-repeat: no-repeat; /*ถ้าเป็ดที่มี มีขนาดเล็กกว่ากล่องที่ล้อมเป็ดมันจะไม่ออกมาซ้ำกัน*/
+    background-size: contain; /*ย่อหรือขยายภาพเป็ดให้พอดีกับกล่อง*/
+    cursor: crosshair;
+
+    /*absolute= เคลื่อนที่เป็ดไปมาได้อย่างอิสระ โดยไม่ถูก Element อื่นๆ ขัดขวาง
+    วางเป็ดทับ Element อื่นๆ เป็ดสามารถปรากฏขึ้นมาทับบนพื้นหลังของเกมได้*/
+    position: absolute;
+    height: 120px;
+    width: 120px;
+}
