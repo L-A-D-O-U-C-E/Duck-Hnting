@@ -20,7 +20,7 @@
         duckElem.className = 'duck'; //เชื่อมมาจาก css
         duckElem.style.left=`${duck.x}px`; //ค่าที่รับต้องเป็น px เลยต้องครอบ ${} และใส่ px ตามหลัง
         duckElem.style.top=`${duck.y}px`;
-        duckElem.style.backgroundImage='url(./left-1.png)';
+        duckElem.style.backgroundImage='url(./left-1.PNG)';
         document.body.appendChild(duckElem);
 
         return{ duck,duckElem};
@@ -31,8 +31,8 @@
         //คำสั่งนี้เป็น shortform 'if' ถ้ามันน้อยกว่า 0 คือบินซ้าย มากกว่าคือขวา
         const direction = duck.speedX >0? 'right':'left'; 
         return duckElem.style.backgroundImage.indexOf('1')!==-1?
-           `url(./${direction}-2.png)`:
-           `url(./${direction}-1.png)`
+           `url(./${direction}-2.PNG)`:
+           `url(./${direction}-1.PNG)`
     }
 
     function moveDuck(duckElem, duck){
@@ -85,4 +85,5 @@
     
     }
     run();
+
 })();
